@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/index",
+    "fcad_sdk/pages/ad"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F0EFF4",
+    "navigationBarTitleText": "先笑为敬",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  }
+}

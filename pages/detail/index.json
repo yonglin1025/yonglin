@@ -1,0 +1,5 @@
+{
+	"usingComponents": {
+		"fcad": "/fcad_sdk/components/ad"
+	}
+}

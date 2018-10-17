@@ -1,0 +1,46 @@
+<!-- Banner -->
+<view class="placement" style="{{data.at==1 ? data.st.wrap : ''}}">
+	<view wx:if="{{data.at==1}}" class="fcad-banner">
+		<image class="fcad-banner-media" mode="widthFix" src="{{data.ma.media}}" style="{{data.st.media}}" bindload="loadsucc"></image>
+		<text class="icon" style="{{data.st.icon}}">FCad广告</text>
+		<view class="shade" wx:if="{{!data.ma.navto}}" bindtap="click"></view>
+		<navigator class="shade" wx:if="{{data.ma.navto}}" target="{{data.ma.target}}" url="{{data.ma.url}}" open-type="{{data.ma.opentype}}" app-id="{{data.ma.appid}}" path="{{data.ma.path}}" extra-data="{{data.ma.extradata}}" version="{{data.ma.version}}" bindtap="click" bindsuccess="clicksucc" bindfail="clickerror">
+		</navigator>
+	</view>
+</view>
+
+<!-- Insert -->
+<view class="placement" style="{{data.at==2 ? data.st.wrap : ''}}">
+	<view wx:if="{{data.at==2}}" class="fcad-insert">
+		<view class="fcad-insert-view">
+			<image class="fcad-insert-media" mode="widthFix" src="{{data.ma.media}}" style="{{data.st.media}}" bindload="loadsucc"></image>
+			<text class="icon" style="{{data.st.icon}}">FCad广告</text>
+			<view class="shade" wx:if="{{!data.ma.navto}}" bindtap="click"></view>
+			<navigator class="shade" wx:if="{{data.ma.navto}}" target="{{data.ma.target}}" url="{{data.ma.url}}" open-type="{{data.ma.opentype}}" app-id="{{data.ma.appid}}" path="{{data.ma.path}}" extra-data="{{data.ma.extradata}}" version="{{data.ma.version}}" bindtap="click" bindsuccess="clicksucc" bindfail="clickerror">
+			</navigator>
+			<view class="close" catchtap="close"><view class="x"></view><view class="y"></view></view>
+		</view>
+	</view>
+</view>
+
+<!-- Fixed -->
+<view class="placement" style="{{data.at==3 ? data.st.wrap : ''}}">
+	<view wx:if="{{data.at==3}}" class="fcad-fixed">
+		<image class="fcad-fixed-media" mode="widthFix" src="{{data.ma.media}}" style="{{data.st.media}}" bindload="loadsucc"></image>
+		<text class="icon" style="{{data.st.icon}}">FCad广告</text>
+		<view class="shade" wx:if="{{!data.ma.navto}}" bindtap="click"></view>
+		<navigator class="shade" wx:if="{{data.ma.navto}}" target="{{data.ma.target}}" url="{{data.ma.url}}" open-type="{{data.ma.opentype}}" app-id="{{data.ma.appid}}" path="{{data.ma.path}}" extra-data="{{data.ma.extradata}}" version="{{data.ma.version}}" bindtap="click" bindsuccess="clicksucc" bindfail="clickerror">
+		</navigator>
+		<view class="close" catchtap="close"><view class="x"></view><view class="y"></view></view>
+	</view>
+</view>
+
+<!-- Video -->
+<view class="placement" style="{{data.at==4 ? data.st.wrap : ''}}">
+	<view wx:if="{{data.at==4}}" class="fcad-video">
+		<video class="fcad-video-media" src="{{data.ma.media}}" style="{{data.st.media}}" controls="{{false}}" objectFit="fill" autoplay="true" loop="true" muted="false" bindplay="loadsucc" custom-cache="{{false}}"></video>
+		<cover-view class="icon" style="{{data.st.icon}}">FCad广告</cover-view>
+		<cover-view class="shade" bindtap="click"></cover-view>
+	</view>
+</view>
+

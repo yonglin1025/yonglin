@@ -1,0 +1,83 @@
+
+.header {
+	padding: 20rpx 30rpx 10rpx;
+}
+.header .title {
+	font-size: 45rpx;
+}
+.header .author {
+	margin: 20rpx 0 20rpx 0;
+}
+.header .author .icon {
+	font-size: 0;
+	width: 60rpx;
+	float: left;
+}
+.header .author .icon image {
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 60rpx;
+}
+.header .author .nickname {
+	color: #666666;
+	font-size: 30rpx;
+	margin-left: 10rpx;
+	float: left;
+	width: 490rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.body {
+	margin: 0 30rpx 0 30rpx;
+}
+.body .iamge {
+	width: 100%;
+}
+.body .text {
+	font-size: 35rpx;
+}
+.shop {
+	margin: 20rpx 30rpx 0 30rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	position: relative;
+}
+.shop .read {
+	font-size: 30rpx;
+	color: #666666;
+	float: left;
+	height: 60rpx;
+}
+.shop .like {
+	float: right;
+	height: 60rpx;
+	margin-left: 10rpx;
+}
+.shop .like image {
+	width: 53rpx;
+	height: 60rpx;
+}
+.shop .like text {
+	font-size: 30rpx;
+	color: rgb(141, 156, 188);
+	position: relative;
+	top: -14rpx;
+	margin-left: 5rpx;
+}
+.shop .share {
+	float: left;
+	width: 53rpx;
+	height: 60rpx;
+	margin-left: 13rpx;
+}
+.shop .share image {
+	width: 53rpx;
+	height: 60rpx;
+}
+
+.fcad-container {
+	padding: 0 30rpx 30rpx 30rpx;
+}

@@ -1,0 +1,112 @@
+/* common */
+.placement {
+	overflow: hidden;
+	position: relative;
+	display: none;
+}
+.icon {
+	background: rgba(0,0,0,0.5);
+	color: white;
+	font-weight: bold;
+	font-size: 25rpx;
+	letter-spacing: 1rpx;
+	border-top-left-radius: 50rpx;
+	border-bottom-left-radius: 50rpx;
+	padding: 5rpx 10rpx 5rpx 20rpx;
+	position: absolute;
+	right: 0rpx;
+	bottom: 4rpx;
+}
+.shade {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+	background: none;
+}
+.close {
+	background: rgba(0,0,0,0.5);
+	color: white;
+	height: 40rpx;
+	width: 40rpx;
+	border-radius: 40rpx;
+	position: absolute;
+	top: 4rpx;
+	right: 4rpx;
+}
+.close .x {
+	background: white;
+	position: relative;
+	width: 80%;
+	height: 5rpx;
+	margin: 17.5rpx 10%;
+	border-radius: 5rpx;
+	transform:rotate(45deg);
+    -ms-transform:rotate(45deg); 
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+}
+.close .y {
+	background: white;
+	position: relative;
+	width: 80%;
+	height: 5rpx;
+	margin: -20rpx 10%;
+	border-radius: 5rpx;
+	transform:rotate(135deg);
+    -ms-transform:rotate(135deg); 
+    -moz-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    -o-transform:rotate(135deg);
+}
+
+/* banner */
+.fcad-banner-media {
+	width: 100%;
+	display: block;
+}
+
+/* insert */
+.fcad-insert {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0, 0, 0, .3);
+	z-index: 9999;
+}
+.fcad-insert-view {
+	position: relative;
+	width: 90%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.fcad-insert-media {
+	width: 100%;
+	display: block;
+}
+
+/* fixed */
+.fcad-fixed {
+	position: fixed;
+	width: 150rpx;
+	height: 150rpx;
+	right: 40rpx;
+	bottom: 40rpx;
+}
+.fcad-fixed-media{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* video */
+.fcad-video-media {
+	width: 100%;
+	display: block;
+}

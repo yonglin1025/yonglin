@@ -1,0 +1,102 @@
+
+.item {
+	widht: 100%;
+}
+.item .blank {
+	height: 20rpx;
+	background: #F0EFF4;
+}
+.item:first-child .blank {
+	height: 0rpx;
+}
+.item .summary {
+	padding: 20rpx 30rpx 10rpx;
+}
+.item .summary .title {
+	font-size: 35rpx;
+}
+.item .summary .image {
+	font-size: 0;
+	margin-top: 15rpx;
+}
+.item .summary .image image {
+	width: 690rpx;
+	height: 390rpx;
+}
+.item .shop {
+	padding: 0 30rpx 20rpx 30rpx;
+}
+.item .shop .icon {
+	font-size: 0;
+	width: 60rpx;
+	float: left;
+}
+.item .shop .author {
+	float: left;
+}
+.item .shop .icon image {
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 60rpx;
+}
+.item .shop .nickname {
+	color: #666666;
+	font-size: 30rpx;
+	float: left;
+	margin-left: 10rpx;
+	width: 400rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.item .shop .like {
+	float: right;
+	height: 60rpx;
+	margin-left: 10rpx;
+}
+.item .shop .like image {
+	width: 53rpx;
+	height: 60rpx;
+}
+.item .shop .like text {
+	font-size: 30rpx;
+	color: rgb(141, 156, 188);
+	position: relative;
+	top: -14rpx;
+	margin-left: 5rpx;
+}
+.item .shop .share {
+	float: right;
+	width: 53rpx;
+	height: 60rpx;
+	margin-left: 13rpx;
+}
+.item .shop .share image {
+	width: 53rpx;
+	height: 60rpx;
+}
+
+
+.footer {
+	padding: 40rpx;
+	background: #F0EFF4;
+}
+.footer .line {
+	width: 215rpx;
+	border-top: 1rpx dashed #cccccc;
+	float: left;
+	margin-top: 13rpx;
+}
+.footer text {
+	color: #cccccc;
+	float: left;
+	font-size: 20rpx;
+	width: 240rpx;
+	text-align: center;
+}
+
+.fcad-container {
+	border-top: 20rpx solid #F0EFF4;
+}

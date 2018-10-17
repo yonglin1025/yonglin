@@ -1,0 +1,40 @@
+<view class="wrapper">
+		<view class="header">
+				<view class="title">
+						<text>{{data.title}}</text>
+				</view>
+				<view class="author">
+						<view class="icon">
+								<image lazy-load="true" mode="aspectFit" src="{{data.user_icon}}"></image>
+						</view>
+						<text class="nickname">{{data.user_nickname}}</text>
+						<view class="clear"></view>
+				</view>
+		</view>
+		<view class="body">
+				<view style="overflow:hidden;">
+						<image wx:if="{{data.image}}" lazy-load="true" mode="widthFix" src="{{data.image}}"></image>
+				</view>
+				<text class="text">{{data.content}}</text>
+		</view>
+		<view class="shop">
+				<view class="read">
+						<text>阅读 {{data.read}}</text>
+				</view>
+				<view class="like">
+						<image wx:if="{{data.islike == true}}" lazy-load="true" mode="aspectFit" bindtap="like" data-viewdata="{{data}}" src="/images/like-choose.png"></image>
+						<image wx:else lazy-load="true" mode="aspectFit" bindtap="like" data-viewdata="{{data}}" src="/images/like-default.png"></image>
+						<text>{{data.like}}</text>
+				</view>
+				<view class="clear"></view>
+		</view>
+		<!-- 广告 -->
+		<view class="fcad-container" style="margin-top: 30rpx">
+				<fcad data="{{fcad.videoad}}" 
+				catchshow="fcadShow" 
+				catchclick="fcadClick"
+				 catchclose="fcadClose" 
+				 catchclicksucc="fcadClickSucc" 
+				 catchclickerror="fcadClickError"></fcad>
+		</view>
+</view>
