@@ -49,6 +49,7 @@ Page({
 		});
 
 	},
+	// 加载广告
 	loadAd: function () {
 		this.fcad.load("videoad", "MTAwMHZm", {
 			success: function () {

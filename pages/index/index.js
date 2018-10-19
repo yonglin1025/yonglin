@@ -10,6 +10,7 @@ Page({
 	data: {
 		lastid: 0,
 		list: [],
+		showbottom: false, //显示加载更多
 	},
 	onLoad: function () {
 		// 分享按钮
@@ -19,7 +20,7 @@ Page({
 			if (data.length > 0) {
 				that.setData({
 					list: data,
-					lastid: data[data.length - 1].id
+					lastid: data[data.length - 1].id,
 				});
 			}
 		})
@@ -30,11 +31,14 @@ Page({
 	// 下拉刷新
 	onPullDownRefresh: function () {
 		var that = this;
+		wx.showLoading({
+			title: '加载中',
+		})
 		getdata(0, function (data) {
 			if (data.length > 0) {
 				wx.stopPullDownRefresh(); //停止刷新
-				showToast("加载完毕"); //提示加载完毕
-				console.log(data)
+				// 隐藏加载框
+				wx.hideLoading();
 				that.setData({
 					list: data,
 					lastid: data[data.length - 1].id
@@ -45,15 +49,26 @@ Page({
 	// 上拉加载
 	onReachBottom: function () {
 		var that = this;
+		wx.showLoading({
+			title: '加载中',
+		})
 		getdata(that.data.lastid, function (data) {
+			// 隐藏加载框
+			wx.hideLoading();
 			if (data.length > 0) {
 				that.setData({
 					list: that.data.list.concat(data),
 					lastid: data[data.length - 1].id
 				});
+			} else {
+				// 数据加载完毕
+				that.setData({
+					showbottom: true
+				});
 			}
 		})
 	},
+	// 跳转
 	view: function (e) {
 		wx.navigateTo({
 			url: '/pages/detail/index?data=' + JSON.stringify(e.currentTarget.dataset.viewdata),
@@ -71,7 +86,7 @@ Page({
 			showToast("今天对该作品的点赞机会已用完，请明天再来");
 			return
 		}
-    // 未点赞
+		// 未点赞
 		likeReport(data.id, () => {
 			showToast("+1");
 			// 存储
@@ -88,6 +103,7 @@ Page({
 			})
 		});
 	},
+	// 加载广告
 	loadAd: function () {
 		this.fcad.load("bannerad", "MTAwMHZl", {
 			success: function () {

@@ -9,9 +9,6 @@ export const getdata = (lastid, fn) => {
 				var islike = wx.getStorageSync("like_" + getNowFormatDate() + "_" + v.id) ? true : false;
 				r.data.data[k].islike = islike;
 			})
-			if (r.data.data.length == 0) {
-				showToast("没有更多啦")
-			}
 			fn(r.data.data)
 		},
 		fail: function (r) {

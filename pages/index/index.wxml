@@ -41,7 +41,7 @@
 				</view>
 		</view>
 		<!-- 加载更多 -->
-		<view class="footer">
+		<view class="footer" wx:if="{{showbottom}}">
 				<view class="line"></view>
 				<text>您已经翻到我的到底线了</text>
 				<view class="line"></view>

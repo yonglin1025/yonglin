@@ -1,7 +1,14 @@
 //app.js
 App({
 	onLaunch: function(){
-		require("./fcad_sdk/fcad_sdk.min.js").App("MTAwMDM2", "/", true);
+    require("./fcad_sdk/fcad_sdk.min.js").App("MTAwMDM2", "/", true);
+    wx.showLoading({
+			title: '加载中',
+    })
+    // 取消加载
+    setTimeout(function(){
+      wx.hideLoading();
+    },2000)
 	}
   /*
   onLaunch: function () {
